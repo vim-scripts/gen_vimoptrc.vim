@@ -1,0 +1,46 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2084
+
+Overview
+--------
+Generate "_vimoptrc" file that contains your all vim optin settings.
+New command ":GenVimOptrc", this script added, parse "option-window" and
+generate configuration file to your home directory.
+This script support your easily update configuration file.
+
+Installation
+------------
+1. Copy the autoresize.vim script to the $HOME/.vim/plugin or
+   the $HOME/vimfiles/plugin. Refer to the ':help add-plugin',
+   ':help add-global-plugin' and ':help runtimepath' topics for
+   more details about Vim plugins.
+2. Restart Vim.
+
+Usage
+-----
+1. Run ":options" command.
+2. Update your vim options.
+3. Run ":GenVimOptrc" command in "option-window",
+   this command generate "_gvimoptrc" in your $HOME directory.
+4. Source "_gvimoptrc" in your gvimrc,
+   for example
+
+   :if has("gui_running")
+     :source $HOME/_gvimoptrc
+   :endif
+
+Configuration
+-------------
+1. You want use ".gvimoptrc" instead of "_gvimoptrc",
+   set your _gvimrc this code.
+   
+   example.
+       :let g:GEN_VIMOPTRC_USE_DOT = 1
+
+Limitation
+----------
+1. Currently only GUI version of vim is supported.
+
+Note
+----
+1. see also ":help save-settings".
+
